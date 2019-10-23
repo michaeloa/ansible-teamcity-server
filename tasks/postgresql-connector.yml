@@ -1,0 +1,15 @@
+---
+- name: "Create jdbc dir"
+  file:
+    path: "{{ teamcity_server_data_dir }}/lib/jdbc"
+    state: directory
+    owner: "{{ teamcity_server_user }}"
+    group: "{{ teamcity_server_group }}"
+    mode: 0755
+
+- name: "Download and unpack mysql-connector"
+  get_url:
+    url: "https://jdbc.postgresql.org/download/postgresql-{{ teamcity_server_postgresql_jdbc_version }}.jar"
+    dest: "{{ teamcity_server_data_dir }}/lib/jdbc/postgresql-{{ teamcity_server_postgresql_jdbc_version }}.jar"
+    owner: "{{ teamcity_server_user }}"
+    group: "{{ teamcity_server_group }}"

@@ -7,7 +7,7 @@
     group: "{{ teamcity_server_group }}"
     mode: 0755
 
-- name: "Download and unpack mysql-connector"
+- name: "Download and unpack postgresql-connector"
   get_url:
     url: "https://jdbc.postgresql.org/download/postgresql-{{ teamcity_server_postgresql_jdbc_version }}.jar"
     dest: "{{ teamcity_server_data_dir }}/lib/jdbc/postgresql-{{ teamcity_server_postgresql_jdbc_version }}.jar"

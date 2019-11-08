@@ -47,9 +47,6 @@ teamcity_server_postgresql_db_user: teamcity
 teamcity_server_postgresql_db_password: teamcity
 
 teamcity_server_plugins:
-  - name: "crowd-plugin"
-    url: https://dl.bintray.com/greggigon/generic/teamcity-crowd-plugin-0.3.0.zip
-
   - name: "ansible-plugin"
     url: https://github.com/andreizhuk/tc-ansible-runner/releases/download/v1.0.1/ansible-runner-dist.zip
 
